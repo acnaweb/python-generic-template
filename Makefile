@@ -1,9 +1,12 @@
-install:
-	echo conda activate template
+dev:
+	pip install -r requirements.dev.txt
+
+install: dev 
 	pip install -r requirements.txt
 
 run:
-	python src/app/app.py	
+	python app/cli.py	
 
 test:
 	pytest
+
